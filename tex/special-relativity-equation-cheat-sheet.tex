@@ -1,0 +1,388 @@
+\documentclass{article}
+\usepackage{amssymb,amsmath,blindtext,listings,graphicx,siunitx, mathrsfs, url}
+\title{Special Relativity Equation Cheat Sheat}
+\date{2026 May}
+\author{Sean Brennan \\ www.zettix.com \\ github.com/zettix/SpecialRelativityEquationsCheatSheet}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This is a collection of equations to reference when learning SR on Youtube.
+Stanford has a class available here: Special Relativity, Stanford.
+Taught by Leonard Susskind.
+\url{https://www.youtube.com/watch?v=Z8ace3NbXAA&list=PLD9DDFBDC338226CA}
+
+\section{The Equations}
+
+Speed of light
+
+\begin{equation}
+\begin{split}
+c &\approx 300,000,000\:\si{\meter/\second} = 3 \times 10^8\:\si{\meter/\second}\\
+&= 299,792,458\:\si{\meter/\second} 
+\end{split}
+\end{equation}
+
+Proper Time (Invariant)
+
+\begin{equation}
+\tau^2 = t^2 - x^2
+\end{equation}
+
+\begin{equation}
+\Delta \tau^2 = \Delta t^2 - \Delta x^2
+\end{equation}
+
+Lorenz Transformations
+
+\begin{equation}
+t' = \frac{t - vx}{\sqrt{1 - v^2}}
+\end{equation}
+
+\begin{equation}
+t = \frac{t' - vx'}{\sqrt{1 - v^2}}
+\end{equation}
+
+\begin{equation}
+x' = \frac{x - vt}{\sqrt{1 - v^2}}
+\end{equation}
+
+\begin{equation}
+x = \frac{x' - vt'}{\sqrt{1 - v^2}}
+\end{equation}
+
+Newtonian Momentum
+
+\begin{equation}
+p = mv
+\end{equation}
+
+Newtonian Force
+
+\begin{equation}
+f = ma = mv^2 = pv
+\end{equation}
+
+4-Space: with time, $X$ has $\mu$ superscript.
+\begin{equation}
+X^\mu = (t, x, y, z)
+\end{equation}
+
+4-Space: without time, $X$ has $i$ superscript.
+\begin{equation}
+X^i = (x, y, z)
+\end{equation}
+
+4-Dimensional Velocity
+\begin{equation}
+\frac{\Delta X^\mu}{\Delta \tau}
+\end{equation}
+
+4-Dimensional Time Velocity
+\begin{equation}
+U_0 = U^0 = \frac{1}{\sqrt{1 - v^2}}
+\end{equation}
+
+4-Dimensional Space Velocity
+\begin{equation}
+\vec U = U^i = U_i = \frac{v^i}{\sqrt{1 - v^2}}
+\end{equation}
+
+Note
+\begin{equation}
+U_0^2 - \vec U^2 = 1
+\end{equation}
+
+Action Potental Sums
+\begin{equation}
+A = -m\sum{\Delta \tau}
+\end{equation}
+
+Action Potental Integral
+\begin{equation}
+\begin{split}
+A  &= -m\int_a^b{\Delta \tau}\\
+&= -m\int_a^b{\sqrt{dt^2 - dx^2}}\\
+&= -m\int_a^b{\sqrt{1 - \frac{dx^2}{dt^2}} dt}\\
+&= -m\int_a^b{\sqrt{1 - \dot x^{i^2}} dt}
+\end{split}
+\end{equation}
+
+Lagrangian
+\begin{equation}
+\begin{split}
+\mathscr{L} &= -m\sqrt{1 - \left( \dot x^{2} + \dot y^{2} + \dot z^{2} \right) }\\
+&=-m\sqrt{1-v^2}
+\end{split}
+\end{equation}
+
+Lagrangian's Lagrangian
+\begin{equation}
+\mathscr{L}_{\mathscr{L}} = \frac{m \dot x^2}{2}
+\end{equation}
+where
+\begin{equation}
+\dot x^2 = \sum{ \dot x_i^{2}}
+\end{equation}
+
+Continue the Action potential integral and get Newtonian Energy
+\begin{equation}
+\begin{split}
+A  &= -m\int_a^b{\mathscr{L}}\\
+&= -m\left( 1 - \frac{v^2}{2} \right)\\
+&= mv^2
+\end{split}
+\end{equation}
+igoring the constant $-m$ from the final value.
+
+\section{Conservation of Energy and Momentum}
+
+Lagrangian momentum
+
+\begin{equation}
+\begin{split}
+P_x &= \frac{\partial\mathscr{L}}{\partial  \dot x}\\
+&= \frac{m \dot x}{2 \sqrt{1 - v^2}}\\
+&= \frac{m v_x}{\sqrt{1-v^{2}}}
+\end{split}
+\end{equation}
+
+where
+\begin{equation}
+v^2 = x^2 + y^2 + z^2
+\end{equation}
+
+This looks like $U_x$, hence, relativistic momemtum uses the mass at rest and the relativistic space axes $x$, $y$, $z$. e.g. $x$:
+\begin{equation}
+P_x = \frac{m v_x}{\sqrt{1-v^2}}
+\end{equation}
+
+4-vector in terms of deltas $\Delta t$, $\Delta x$.
+
+Momentum by component
+\begin{equation}
+\begin{split}
+mU^x &= P_x\\
+mU^y &= P_y\\
+mU^z &= P_z\\
+mU^0 &= P_0
+\end{split}
+\end{equation}
+
+Conservation of momenta
+\begin{equation}
+\vec P_{initial} = \vec P_{final}
+\end{equation}
+
+or
+
+\begin{equation}
+\vec P_{initial} - \vec P_{final} = 0
+\end{equation}
+
+What is $P_0$?  Is it the particle energy?  Look at the Hamiltonian.
+\begin{equation}
+H = \sum_i{\dot X_i P^i - \mathscr{L}}
+\end{equation}
+
+By component, $P^i$
+\begin{equation}
+P^i = \frac{m \dot X^{i}}{\sqrt{1 - v^2}}
+\end{equation}
+
+By component, $\mathscr{L}$
+\begin{equation}
+\mathscr{L} = -m \sqrt{1 - v^{2}}
+\end{equation}
+
+Rewriting the Hamiltonian
+\begin{equation}
+H = \sum_i \frac{m \dot x_{i}^{2}}{\sqrt{1 - v^2}} + m \sqrt{1-v^2}
+\end{equation}
+
+using
+
+\begin{equation}
+v^2 = \sum_i \dot x_{i}^{2}
+\end{equation}
+
+we get and simplify
+\begin{equation}
+\begin{split}
+H &=\frac{m v^2}{\sqrt{1 - v^2}} + m \sqrt{1-v^2} \\
+&=\frac{m v^2}{\sqrt{1 - v^2}} + \frac{m \left( \sqrt{1-v^2} \right)^2}{\sqrt{1-v^2}}\\
+&=\frac{m v^2 + m - m v^2}{\sqrt{1-v^2}}\\
+&=\frac{m}{\sqrt{1-v^2}} = m U_0
+\end{split}
+\end{equation}
+
+To calculate energy of a particle at rest, we use the Taylor expansion of
+\begin{equation}
+\frac{1}{\sqrt{1 - v^2}} = \left( 1 - v^2 \right)^{-\frac{1}{2}} \approx 1 + \frac{v^2}{2}
+\end{equation}
+
+And get energy
+
+\begin{equation}
+H = m + \frac{m v^2}{2}
+\end{equation}
+
+Note that at rest, velocity is zero so energy is simply $m$, however, the units of $H$, to be consistant with
+$\frac{m v^2}{2}$ must be $\frac{g m^2}{s^2}$ hence $\frac{m v^2}{2}$ drops and fixing the units, rest energy is:
+\begin{equation}
+H_{rest} = mc^2
+\end{equation}
+
+\section{Massless Particles}
+
+Clearly, $m=0$, $v=c$ causes energy, $\frac{m}{1 - v^2}$, to go to $\frac{0}{0}$ so instead we use momentum. Recall
+
+
+\begin{equation}
+U^{0^2} - U^{x^2} - U^{y^2} - U^{z^2} = 1
+\end{equation}
+
+Multiply by m
+
+\begin{equation}
+m^2U^{0^2} - m^2U^{x^2} - m^2U^{y^2} - m^2U^{z^2} = m^2
+\end{equation}
+
+Substitute energy and momentum
+\begin{equation}
+E^2 - P_x^2 - P_y^2 - P_z^2 = m^2
+\end{equation}
+
+To Energy:
+
+\begin{equation}
+E = \sqrt{P^2 + m^2}
+\end{equation}
+
+With units
+
+\begin{equation}
+E = \sqrt{P^2 c^2 + m^2 c^4}
+\end{equation}
+
+As massless:
+\begin{equation}
+E = c |P|
+\end{equation}
+
+\section{positronium}
+
+An electon and an positron in orbit, and will decay into two photons, leaving in opposite directions.
+Calculate the energy and momentum of the system before and after decay.  Initial mass in joules or grams.
+Momentum is conserved.  At rest, zero.  Photons must go in opposite directions for momentum to be zero.  And equal momentum, to ensure zero momentum.
+
+Start with
+\begin{equation}
+E_{rest} = m_{positronium} c^2
+\end{equation}
+
+This must equal the end state, twice the momenta of each photon:
+
+\begin{equation}
+m c^2 = 2 c |P|
+\end{equation}
+
+Rearrange
+\begin{equation}
+\frac{m c}{2} = |P|
+\end{equation}
+
+\section{Energy with Units}
+
+\begin{equation}
+E = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}}
+\end{equation}
+
+\section{Lecture 4}
+
+Fields. Discussion of field function from $t$ and $x$ to $\phi$.
+\begin{equation}
+\phi(t, x)
+\end{equation}
+
+The action
+
+\begin{equation}
+Action = \int_a^b \frac{m}{2}\left( \frac{d\phi}{dt} \right)^2 - V(\phi) dt
+\end{equation}
+
+Lagrangian
+
+\begin{equation}
+\mathscr{L} = \frac{m}{2} \dot \phi^{2} - V(\phi)
+\end{equation}
+
+Equations of motion given by
+
+\begin{equation}
+\frac{d}{dt} \: \frac{\partial \mathscr{L}}{\partial \dot \phi} =\\
+\frac{\partial \mathscr{L}}{\partial \phi}
+\end{equation}
+
+Carry out computation to get Newton's equations:
+\begin{equation}
+m \ddot \phi = - \frac{\partial V}{\partial \phi}
+\end{equation}
+
+Discussion of least action from point $a$ to point $b$.  Cut time axis into
+slices, the integral is a sum of the value of $phi$ at each slice.  To minimize,
+take the derivative.
+
+
+We are $Three\: plus\: one$ for three space dimensions and one time dimesion.
+
+Hold fixed the boundary, wiggle up and down, until we minimize the action.
+
+In practice, the Action Potential is
+
+\begin{equation}
+A  = \int \int \int \int dx\: dy\: dz\: dt
+\end{equation}
+
+But in shorthand
+\begin{equation}
+A  = \int d^4 x \: \mathscr{L} \left(\phi, \frac{\partial \phi}{\partial t},\\
+\frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y},\\
+\frac{\partial \phi}{\partial z}\right)
+\end{equation}
+
+Condense once
+\begin{equation}
+A  = \int d^4 x \: \mathscr{L} \left(\phi, \frac{\partial \phi}{\partial x^\mu} \right)
+\end{equation}
+
+And use
+\begin{equation}
+\begin{split}
+\phi_t &= \frac{\partial \phi}{\partial t}\\
+\phi_x &= \frac{\partial \phi}{\partial x}\\
+\phi_y &= \frac{\partial \phi}{\partial y}\\
+\phi_z &= \frac{\partial \phi}{\partial z}
+\end{split}
+\end{equation}
+
+To condense notation further, rather than use $\dot \phi$
+
+How to handle a field, which is a surface?   Some other notes describe the
+Euler Lagrange equations, but here we have:
+
+\begin{equation}
+\frac{d}{dt} \: \frac{\partial \mathscr{L}}{\partial \dot \phi} -\\
+\frac{\partial \mathscr{L}}{\partial \phi} = 0
+\end{equation}
+
+Or starting here:
+\begin{equation}
+\frac{d}{dt} \: \frac{\partial \mathscr{L}}{\partial \frac{d \phi}{dt}} -\\
+\frac{\partial \mathscr{L}}{\partial \phi} = 0
+\end{equation}
+
+
+
+\end{document}
+
