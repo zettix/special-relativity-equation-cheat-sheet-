@@ -8,7 +8,10 @@ Stanford University has a class available here:
 [https://www.youtube.com/watch?v=Z8ace3NbXAA&list=PLD9DDFBDC338226CA](
 https://www.youtube.com/watch?v=Z8ace3NbXAA&list=PLD9DDFBDC338226CA)
 
-##    Status
+## Sample
+
+ ![sample equation](https://github.com/zettix/special-relativity-equation-cheat-sheet-/blob/main/SR-example.png)
+## Status
 
 *Incomplete*
 
